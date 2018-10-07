@@ -84,7 +84,7 @@ public class menuAwalSupervisor extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menustokb.png"))); // NOI18N
         jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 190, 190));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 190, 190));
 
         jPanel5.setBackground(new java.awt.Color(114, 96, 96));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -103,7 +103,7 @@ public class menuAwalSupervisor extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menustokbhn.png"))); // NOI18N
         jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 190, 190));
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 190, 190));
 
         jPanel7.setBackground(new java.awt.Color(114, 96, 96));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -122,7 +122,7 @@ public class menuAwalSupervisor extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menustokhbs.png"))); // NOI18N
         jPanel7.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 110, -1));
 
-        jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, 190, 190));
+        jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 190, 190));
 
         jPanel8.setBackground(new java.awt.Color(114, 96, 96));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -136,7 +136,7 @@ public class menuAwalSupervisor extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menulaptrans.png"))); // NOI18N
         jPanel8.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 110, -1));
 
-        jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 190, 190));
+        jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 190, 190));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 810, 700));
 
