@@ -5,6 +5,8 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author HP
@@ -30,19 +32,19 @@ public class menuAwalSupervisor extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
+        logout = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        stokbaju = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        stokbahan = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
+        bahanhabis = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
+        laporan = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -58,14 +60,14 @@ public class menuAwalSupervisor extends javax.swing.JFrame {
         jLabel8.setText("Selamat datang!");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, -1, -1));
 
-        jButton7.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
-        jButton7.setText("Log Out");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        logout.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
+        logout.setText("Log Out");
+        logout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                logoutActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 140, 60));
+        jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 140, 60));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 700));
 
@@ -75,11 +77,11 @@ public class menuAwalSupervisor extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(114, 96, 96));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(56, 56, 56));
-        jButton1.setText("Stok Baju");
-        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
+        stokbaju.setBackground(new java.awt.Color(204, 204, 204));
+        stokbaju.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
+        stokbaju.setForeground(new java.awt.Color(56, 56, 56));
+        stokbaju.setText("Stok Baju");
+        jPanel4.add(stokbaju, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menustokb.png"))); // NOI18N
         jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
@@ -89,16 +91,16 @@ public class menuAwalSupervisor extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(114, 96, 96));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(56, 56, 56));
-        jButton2.setText("Stok Bahan");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        stokbahan.setBackground(new java.awt.Color(204, 204, 204));
+        stokbahan.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
+        stokbahan.setForeground(new java.awt.Color(56, 56, 56));
+        stokbahan.setText("Stok Bahan");
+        stokbahan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                stokbahanActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+        jPanel5.add(stokbahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menustokbhn.png"))); // NOI18N
         jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
@@ -108,16 +110,16 @@ public class menuAwalSupervisor extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(114, 96, 96));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setBackground(new java.awt.Color(204, 204, 204));
-        jButton4.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(56, 56, 56));
-        jButton4.setText("Bahan Habis");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        bahanhabis.setBackground(new java.awt.Color(204, 204, 204));
+        bahanhabis.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
+        bahanhabis.setForeground(new java.awt.Color(56, 56, 56));
+        bahanhabis.setText("Bahan Habis");
+        bahanhabis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                bahanhabisActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 140, 130, -1));
+        jPanel7.add(bahanhabis, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 140, 130, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menustokhbs.png"))); // NOI18N
         jPanel7.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 110, -1));
@@ -127,11 +129,11 @@ public class menuAwalSupervisor extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(114, 96, 96));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton5.setBackground(new java.awt.Color(204, 204, 204));
-        jButton5.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(56, 56, 56));
-        jButton5.setText("Laporan Transaksi");
-        jPanel8.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
+        laporan.setBackground(new java.awt.Color(204, 204, 204));
+        laporan.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
+        laporan.setForeground(new java.awt.Color(56, 56, 56));
+        laporan.setText("Laporan Transaksi");
+        jPanel8.add(laporan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menulaptrans.png"))); // NOI18N
         jPanel8.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 110, -1));
@@ -143,60 +145,24 @@ public class menuAwalSupervisor extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void stokbahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stokbahanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_stokbahanActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void bahanhabisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bahanhabisActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_bahanhabisActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_logoutActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(menuAwalSupervisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(menuAwalSupervisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(menuAwalSupervisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(menuAwalSupervisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new menuAwalSupervisor().setVisible(true);
-            }
-        });
-    }
-
+  
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton bahanhabis;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -209,5 +175,21 @@ public class menuAwalSupervisor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JButton laporan;
+    private javax.swing.JButton logout;
+    private javax.swing.JButton stokbahan;
+    private javax.swing.JButton stokbaju;
     // End of variables declaration//GEN-END:variables
+public void addListener(ActionListener e){
+        laporan.addActionListener(e);
+        logout.addActionListener(e);
+        stokbahan.addActionListener(e);
+        laporan.addActionListener(e);
+    }
+
+
+
+
+
 }
+

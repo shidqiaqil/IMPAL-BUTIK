@@ -5,6 +5,8 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author HP
@@ -34,9 +36,9 @@ public class login extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        unamesupervisor = new javax.swing.JTextField();
+        sub = new javax.swing.JButton();
+        passsupervisor = new javax.swing.JPasswordField();
 
         jLabel3.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -51,7 +53,7 @@ public class login extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/WhatsNewIcon.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(482, 87, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 48)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Agency FB", 0, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(56, 56, 56));
         jLabel5.setText("KINGSMAN BOUTIQUE");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(443, 303, -1, -1));
@@ -71,72 +73,50 @@ public class login extends javax.swing.JFrame {
         jLabel4.setText("Password");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, -1, -1));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        unamesupervisor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                unamesupervisorActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 450, 40));
-        jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 450, 40));
+        jPanel2.add(unamesupervisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 450, 40));
 
-        jButton1.setText("Masuk");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        sub.setText("Masuk");
+        sub.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                subActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 180, -1, -1));
+        jPanel2.add(sub, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 180, -1, -1));
+
+        passsupervisor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passsupervisorActionPerformed(evt);
+            }
+        });
+        jPanel2.add(passsupervisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 450, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 1200, 240));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void unamesupervisorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unamesupervisorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_unamesupervisorActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_subActionPerformed
+
+    private void passsupervisorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passsupervisorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passsupervisorActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new login().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -144,7 +124,21 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPasswordField passsupervisor;
+    private javax.swing.JButton sub;
+    private javax.swing.JTextField unamesupervisor;
     // End of variables declaration//GEN-END:variables
+    public void addListener(ActionListener e){
+        sub.addActionListener(e);
+    }
+    public String getuser(){
+        return unamesupervisor.getText();
+    }
+    public String getpass(){
+        return String.valueOf(passsupervisor.getText());
+    }
+    public void reset(){
+        unamesupervisor.setText("");
+        passsupervisor.setText("");
+    }
 }
