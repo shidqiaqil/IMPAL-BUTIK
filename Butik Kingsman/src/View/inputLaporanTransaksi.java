@@ -5,6 +5,7 @@
  */
 package View;
 
+import Model.cekisnumber;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
@@ -255,9 +256,9 @@ public class inputLaporanTransaksi extends javax.swing.JFrame {
         return back;
     }
     public int getjumlah(){
-    try {
+        if(new cekisnumber(inputjumlah.getText()).isnumber()){
             return Integer.parseInt(inputjumlah.getText());
-        } catch (Exception e) {
+        }else{
             return 0;
         }
     }

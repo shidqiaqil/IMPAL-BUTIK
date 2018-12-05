@@ -5,6 +5,7 @@
  */
 package driver;
 
+import Model.addslashes;
 import kontroler.login_kontroler;
 
 /**
@@ -13,6 +14,9 @@ import kontroler.login_kontroler;
  */
 public class driver {
     public static void main(String[] args) {
-        new login_kontroler();
+        //new login_kontroler();
+        addslashes b=new addslashes();
+        b.setX("fu\'an");
+        System.out.println(b.addslash());
     }
 }

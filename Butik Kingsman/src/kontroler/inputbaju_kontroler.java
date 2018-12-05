@@ -5,6 +5,8 @@
  */
 package kontroler;
 
+import Model.addslashes;
+import Model.isempty;
 import View.inputBajuJadi;
 import database.database;
 import java.awt.event.ActionEvent;
@@ -35,11 +37,19 @@ public class inputbaju_kontroler implements ActionListener{
             gui.dispose();
             new suplier_kontroler();
         }else{
-            String nobaju=gui.getnobaju();
-            String namabaju=gui.getnamabaju();
+            addslashes a=new addslashes();
+            a.setX(gui.getnobaju());
+            String nobaju=a.addslash();
+            a.setX(gui.getnamabaju());
+            String namabaju=a.addslash();
             int jumlah=gui.getjumlah();
-            String model=gui.getmodel();
-            if(!nobaju.equals("")&&!namabaju.equals("") && !model.equals("")){
+            a.setX(gui.getmodel());
+            String model=a.addslash();
+            isempty b=new isempty();
+            b.setNo(nobaju);
+            b.setNama(namabaju);
+            b.setModel(model);
+            if(!b.iskosong()){
                 String query="insert into barang values('"+nobaju+"','"+namabaju+"',"+jumlah+",'"+model+"')";
                 db.isidata(query);
                 gui.reset();

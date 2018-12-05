@@ -6,6 +6,7 @@
 
 package kontroler;
 
+import Model.addslashes;
 import View.login;
 import database.database;
 import java.awt.event.ActionEvent;
@@ -32,8 +33,11 @@ public class login_kontroler implements ActionListener{
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        String username=gui.getuser();
-        String pass=gui.getpass();
+        addslashes a=new addslashes();
+        a.setX(gui.getuser());
+        String username=a.addslash();
+        a.setX(gui.getpass());
+        String pass=a.addslash();
         System.out.println("select * from login_supervisor where usupervisor='"+username+"' and psupervisor='"+pass+"'");
         try {
             rs=db.getdata("select * from login_supervisor where usupervisor='"+username+"' and psupervisor='"+pass+"'");
