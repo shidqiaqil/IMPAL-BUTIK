@@ -3,12 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/View/home%20awal.jpg</file>
-            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/View/homeAwal.java</file>
-            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/View/menuAwalKasir.java</file>
+            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/View/stokBaju.java</file>
+            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/View/menuAwalSupervisor.java</file>
+            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/kontroler/laporan_kontroler.java</file>
+            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/kontroler/inputbaju_kontroler.java</file>
             <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/View/login.java</file>
             <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/kontroler/login_kontroler.java</file>
-            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/database/database.java</file>
+            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/kontroler/menuAwalSupervisor_kontroler.java</file>
+            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/Model/Laporan.java</file>
+            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/View/laporanTransaksi.java</file>
+            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/kontroler/stokbaju_kontroler.java</file>
+            <file>file:/C:/Users/Shidqiaqil/Documents/GitHub/IMPAL-BUTIK/Butik%20Kingsman/src/View/inputBajuJadi.java</file>
         </group>
     </open-files>
 </project-private>

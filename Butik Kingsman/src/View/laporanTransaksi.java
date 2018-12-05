@@ -5,6 +5,14 @@
  */
 package View;
 
+import Model.Laporan;
+import Model.barang;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import javax.swing.JButton;
+import javax.swing.table.DefaultTableModel;
+import kontroler.laporan_kontroler;
+
 /**
  *
  * @author HP
@@ -14,9 +22,31 @@ public class laporanTransaksi extends javax.swing.JFrame {
     /**
      * Creates new form stokBahan
      */
+    private Object[] rowlaporan={"no_laporan","no_baju","no_transaksi","jumlah","nama_baju"};
+    private DefaultTableModel tabellap= new DefaultTableModel(null,rowlaporan);
     public laporanTransaksi() {
-        initComponents();
-    }
+        initComponents(); 
+        tabellaporan.setModel(tabellap);
+            /*Dimension screensize = Toolkit.getDefaultToolkit().getScreenSize();
+            setLocation((screensize.width / 2) - (getSize().width / 2), 
+                    (screensize.height / 2) - (getSize().height / 2)); */ 
+        }
+        
+        public void tampilstok(ArrayList<Laporan> a){
+            int z=tabellap.getRowCount();
+            for (int i=0; i<z ; i++) {
+                tabellap.removeRow(0);
+            }
+            for (Laporan x: a){
+                String no_laporan = x.getNo_laporan();
+                String no_baju= x.getNo_baju();
+                String no_transaksi= x.getNo_transaksi();
+                int jumlah= x.getJumlah();
+                String nama_baju= x.getNama_baju();
+                Object[] data={no_laporan,no_baju,no_transaksi,jumlah, nama_baju};
+                tabellap.addRow(data);
+            }
+        }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -29,15 +59,12 @@ public class laporanTransaksi extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        back = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
+        logout = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabellaporan = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -48,75 +75,48 @@ public class laporanTransaksi extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/WhatsNewIcon.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 190, -1));
 
-        jButton1.setText("Back");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        back.setText("Back");
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(56, 56, 56));
         jLabel5.setText("LAPORAN TRANSAKSI");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 310, -1));
 
-        jButton7.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
-        jButton7.setText("Log Out");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        logout.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
+        logout.setText("Log Out");
+        logout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                logoutActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 580, 140, 60));
+        jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 580, 140, 60));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 700));
 
         jPanel2.setBackground(new java.awt.Color(56, 56, 56));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 32)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("No Laporan Transaksi :");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 230, -1));
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 340, 40));
-
-        jButton2.setText("Submit");
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 100, 100, 40));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabellaporan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "No Kasir", "No Transaksi", "Tanggal", "No Laporan", "Pemasukan"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
-            };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
             }
-        });
-        jScrollPane1.setViewportView(jTable1);
+        ));
+        jScrollPane1.setViewportView(tabellaporan);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 720, 480));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 720, 480));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 850, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_logoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,16 +155,26 @@ public class laporanTransaksi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton back;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton logout;
+    private javax.swing.JTable tabellaporan;
     // End of variables declaration//GEN-END:variables
+
+public void addListener(ActionListener e){
+        back.addActionListener(e);
+        logout.addActionListener(e);
+    }
+public JButton getsback(){
+    return back;
+}
+public JButton getstombollogout(){
+    return logout;
+}
+
+   
 }

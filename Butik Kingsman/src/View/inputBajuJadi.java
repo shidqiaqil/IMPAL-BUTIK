@@ -5,6 +5,10 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author HP
@@ -29,17 +33,19 @@ public class inputBajuJadi extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        back = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
+        logout = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        inputnobaju = new javax.swing.JTextField();
+        inputnamabaju = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        inputjumlahbaju = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        submit = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        inputmodel = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -50,22 +56,22 @@ public class inputBajuJadi extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/WhatsNewIcon.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 190, -1));
 
-        jButton1.setText("Back");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        back.setText("Back");
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(56, 56, 56));
         jLabel5.setText("INPUT BAJU JADI");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 250, -1));
 
-        jButton7.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
-        jButton7.setText("Log Out");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        logout.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
+        logout.setText("Log Out");
+        logout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                logoutActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 580, 140, 60));
+        jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 580, 140, 60));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 700));
 
@@ -75,62 +81,87 @@ public class inputBajuJadi extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 32)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("No Baju         :");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 160, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 160, -1));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        inputnobaju.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                inputnobajuActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 420, 40));
+        jPanel2.add(inputnobaju, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 420, 40));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        inputnamabaju.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                inputnamabajuActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 420, 40));
+        jPanel2.add(inputnamabaju, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, 420, 40));
 
         jLabel3.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 32)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nama Baju    :");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 160, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 160, -1));
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        inputjumlahbaju.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                inputjumlahbajuActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 420, 40));
+        jPanel2.add(inputjumlahbaju, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 420, 40));
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 32)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Jumlah Baju  :");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 160, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 160, -1));
 
-        jButton4.setText("Submit");
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 440, 100, 40));
+        submit.setText("Submit");
+        submit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitActionPerformed(evt);
+            }
+        });
+        jPanel2.add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 440, 100, 40));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Model        :");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, 140, 20));
+
+        inputmodel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputmodelActionPerformed(evt);
+            }
+        });
+        jPanel2.add(inputmodel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, 420, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 850, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void inputnobajuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputnobajuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_inputnobajuActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_logoutActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void inputnamabajuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputnamabajuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_inputnamabajuActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void inputjumlahbajuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputjumlahbajuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_inputjumlahbajuActionPerformed
+
+    private void inputmodelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputmodelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputmodelActionPerformed
+
+    private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,18 +206,61 @@ public class inputBajuJadi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton back;
+    private javax.swing.JTextField inputjumlahbaju;
+    private javax.swing.JTextField inputmodel;
+    private javax.swing.JTextField inputnamabaju;
+    private javax.swing.JTextField inputnobaju;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JButton logout;
+    private javax.swing.JButton submit;
     // End of variables declaration//GEN-END:variables
+    public void addListener(ActionListener e){
+        back.addActionListener(e);
+        logout.addActionListener(e);
+        submit.addActionListener(e);
+    }
+    public JButton getstombolinput(){
+    return submit;
+}
+public JButton getstombollogout(){
+    return logout;
+}
+public JButton getstombolback(){
+    return back; 
+}
+
+public void reset(){
+    inputnobaju.setText("");
+    inputnamabaju.setText("");
+    inputjumlahbaju.setText("");
+    inputmodel.setText("");
+}
+
+public String getnobaju(){
+    return inputnobaju.getText();
+}
+public String getnamabaju(){
+    return inputnamabaju.getText();
+}
+public int getjumlah(){
+    try {
+            return Integer.parseInt(inputjumlahbaju.getText());
+        } catch (Exception e) {
+            return 0;
+        }
+}
+public String getmodel(){
+    return inputmodel.getText();
+}
+
+
+
 }

@@ -34,17 +34,20 @@ public class login_kontroler implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         String username=gui.getuser();
         String pass=gui.getpass();
+        System.out.println("select * from login_supervisor where usupervisor='"+username+"' and psupervisor='"+pass+"'");
         try {
             rs=db.getdata("select * from login_supervisor where usupervisor='"+username+"' and psupervisor='"+pass+"'");
             if(rs.next()){
-                gui.dispose();
-                new menuAwalSupervisor_kontroler();
-                if(rs.getString(2)=="supervisor"){
-                    
-                }else if(rs.getString(2)=="manager"){
-                    
-                }else if(rs.getString(2)=="kasir"){
-                    
+                
+                if(rs.getString(3).equals("supervisor")){
+                    gui.dispose();
+                    new menuAwalSupervisor_kontroler();
+                }else if(rs.getString(3).equals("suplier")){
+                    gui.dispose();
+                    new suplier_kontroler();
+                }else if(rs.getString(3).equals("kasir")){
+                    gui.dispose();
+                    new kasir_kontroler();
                 } 
             }else{
                 JOptionPane.showMessageDialog(gui, "maaf user tidak ada", "error", 0);

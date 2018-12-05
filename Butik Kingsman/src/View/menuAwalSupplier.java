@@ -5,6 +5,9 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
 /**
  *
  * @author HP
@@ -30,14 +33,14 @@ public class menuAwalSupplier extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
+        logout = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        btninputbaju = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        btncekbaju = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -52,14 +55,14 @@ public class menuAwalSupplier extends javax.swing.JFrame {
         jLabel8.setText("Selamat datang!");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, -1, -1));
 
-        jButton7.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
-        jButton7.setText("Log Out");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        logout.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
+        logout.setText("Log Out");
+        logout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                logoutActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 140, 60));
+        jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 140, 60));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 700));
 
@@ -69,16 +72,16 @@ public class menuAwalSupplier extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(114, 96, 96));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(56, 56, 56));
-        jButton2.setText("Input Bahan");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btninputbaju.setBackground(new java.awt.Color(204, 204, 204));
+        btninputbaju.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
+        btninputbaju.setForeground(new java.awt.Color(56, 56, 56));
+        btninputbaju.setText("Input Baju");
+        btninputbaju.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btninputbajuActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+        jPanel5.add(btninputbaju, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 140, 120, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menustokbhn.png"))); // NOI18N
         jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
@@ -88,19 +91,19 @@ public class menuAwalSupplier extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(114, 96, 96));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setBackground(new java.awt.Color(204, 204, 204));
-        jButton4.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(56, 56, 56));
-        jButton4.setText("Bahan Habis");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btncekbaju.setBackground(new java.awt.Color(204, 204, 204));
+        btncekbaju.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
+        btncekbaju.setForeground(new java.awt.Color(56, 56, 56));
+        btncekbaju.setText("Cek Stok Baju");
+        btncekbaju.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btncekbajuActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 140, 130, -1));
+        jPanel7.add(btncekbaju, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 140, 140, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menustokhbs.png"))); // NOI18N
-        jPanel7.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 110, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menustokb.png"))); // NOI18N
+        jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
         jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 190, 190));
 
@@ -109,17 +112,17 @@ public class menuAwalSupplier extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btninputbajuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninputbajuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btninputbajuActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_logoutActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btncekbajuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncekbajuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btncekbajuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,16 +167,30 @@ public class menuAwalSupplier extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton btncekbaju;
+    private javax.swing.JButton btninputbaju;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JButton logout;
     // End of variables declaration//GEN-END:variables
+public void addListener(ActionListener e){
+        btninputbaju.addActionListener(e);
+        logout.addActionListener(e);
+        btncekbaju.addActionListener(e);
+    }
+public JButton getstombolinput(){
+    return btninputbaju;
+}
+public JButton getstombollogout(){
+    return logout;
+}
+public JButton getstombolcek(){
+    return btncekbaju; 
+}
 }
