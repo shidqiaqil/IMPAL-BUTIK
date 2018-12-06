@@ -14,9 +14,9 @@ import kontroler.login_kontroler;
  */
 public class driver {
     public static void main(String[] args) {
-        //new login_kontroler();
-        addslashes b=new addslashes();
-        b.setX("fu\'an");
-        System.out.println(b.addslash());
+        new login_kontroler();
+        //addslashes b=new addslashes();
+        //b.setX("fu\'an");
+        //System.out.println(b.addslash());
     }
 }

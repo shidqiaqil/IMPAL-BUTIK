@@ -11,7 +11,7 @@ import javax.swing.JButton;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import net.proteanit.sql.DbUtils;
+//import net.proteanit.sql.DbUtils;
 import Model.barang;
 import java.awt.Dimension;
 import java.awt.Toolkit;
